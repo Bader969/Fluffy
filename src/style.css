@@ -1441,7 +1441,7 @@ select {
     height: 100svh;
   }
 }
-.product-image img[src$="poster.webp"] {
+.product-image img[src$="poster.webp"], .product-image img[src$="caramel.webp"] {
   object-position: 65% center;
 }
 .cart-item img {
