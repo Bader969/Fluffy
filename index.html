@@ -1,152 +1,440 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f8f3e8" />
+    <meta name="theme-color" content="#FBF9F5" />
     <meta
       name="description"
-      content="Meet Fluffy. Golden Japanese soufflé pancakes, a cloud-soft centre, and a little moment of happiness."
+      content="Fluffy — Japanische Soufflé-Pâtisserie. Entdecken Sie goldene Soufflé-Kreationen, Matcha und die Kunst des leichten Genusses."
     />
-    <meta property="og:title" content="Fluffy — Happiness, extra fluffy." />
+    <meta property="og:title" content="Fluffy — Die Kunst der Leichtigkeit." />
     <meta
       property="og:description"
-      content="A little pause. A lot of Fluffy. Discover our signature Japanese soufflé pancake."
+      content="Japanische Soufflé-Pâtisserie. Wie eine Wolke. Handgefertigt in Perfektion."
     />
-    <meta property="og:image" content="/assets/pancake-master.png" />
-    <title>Fluffy — Happiness, extra fluffy.</title>
+    <meta property="og:image" content="/assets/poster.webp" />
+    <title>Fluffy — Japanische Soufflé-Pâtisserie</title>
     <link rel="icon" href="/assets/icon.svg" />
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <a class="skip" href="#signature">Skip to the pancake</a>
-    <header>
-      <a class="brand" href="#" aria-label="Fluffy home"
-        ><img src="/assets/wordmark.png" alt="Fluffy"
-      /></a>
-      <nav aria-label="Main navigation">
-        <a href="#signature">Our pancake</a><a href="#cafe">The slow life</a>
-      </nav>
-      <a class="header-cta" href="#signature"
-        >Meet your happy place <span>↗</span></a
+    <a href="#kollektion" class="skip-link">Direkt zur Auswahl</a>
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="Fluffy Startseite"
+        >fluffy<span>JAPANISCHE SOUFFLÉ-PÂTISSERIE</span></a
       >
+      <nav aria-label="Hauptnavigation">
+        <a href="#kollektion" data-cursor="Entdecken">Kreationen</a
+        ><a href="#handwerk" data-cursor="Entdecken">Unser Handwerk</a
+        ><a href="#boutique">Die Boutique</a>
+      </nav>
+      <div class="header-actions">
+        <button class="reservation-link" data-reserve>Tisch reservieren</button
+        ><button class="bag-button" data-cart aria-label="Warenkorb öffnen">
+          Warenkorb <span id="cart-count">0</span>
+        </button>
+      </div>
     </header>
+    <main>
+      <section
+        class="story"
+        id="geschichte"
+        aria-label="Die Entstehung einer Fluffy-Kreation"
+      >
+        <div class="stage">
+          <img
+            class="hero-poster"
+            src="/assets/stacking-poster.webp"
+            alt="Goldene japanische Soufflé-Pancakes mit Butter und Ahornsirup"
+            fetchpriority="high"
+          /><canvas id="story-canvas" aria-hidden="true"></canvas>
+          <div class="hero-wash"></div>
+          <div class="hero-copy">
+            <p class="eyebrow">JAPANISCHE SEELE. FEINE PÂTISSERIE.</p>
+            <h1>Die Kunst<br />der <em>Leichtigkeit.</em></h1>
+            <p class="hero-description">
+              Ein flüchtiger Moment.<br />Ein Geschmack, der bleibt.
+            </p>
+            <a
+              class="dark-button magnetic"
+              href="#kollektion"
+              data-cursor="Bestellen"
+              >Jetzt bestellen <span>↗</span></a
+            >
+          </div>
+          <span class="vertical-note" aria-hidden="true"
+            >「ふわふわ」 — WIE EINE WOLKE</span
+          >
+          <div class="hero-caption" hidden>
+            <p class="eyebrow">EIN KLEINES RITUAL. EIN GROSSER MOMENT.</p>
+            <h2>Geduld wird<br /><em>zum Genuss.</em></h2>
+          </div>
+          <div class="story-controls">
+            <a href="#philosophie" class="scroll-cue"
+              >↓ <span>MIT JEDEM SCROLL EIN WENIG LEICHTER</span></a
+            ><span class="story-step">01 / DIE LEICHTIGKEIT</span
+            ><button id="motion-toggle" aria-pressed="false">
+              Bewegung pausieren</button
+            ><a href="#kollektion">Geschichte überspringen ↗</a>
+          </div>
+          <div class="progress"><i></i></div>
+        </div>
+      </section>
+      <section class="philosophy" id="philosophie">
+        <p class="eyebrow">KLEINE KUNSTWERKE. GROSSE GEFÜHLE.</p>
+        <h2 class="reveal-title">
+          Wie eine Wolke.<br /><em>Handgefertigt in Perfektion.</em>
+        </h2>
+        <div class="philosophy-bottom">
+          <span class="japanese" aria-hidden="true">ふわふわ</span>
+          <p>
+            Außen zart golden, innen voller Leichtigkeit. Bei Fluffy begegnet
+            japanische Soufflé-Kunst der feinen Sprache der Pâtisserie. Für
+            einen Augenblick, der ganz Ihnen gehört.
+          </p>
+          <a class="text-link" href="#handwerk"
+            >Unser Handwerk entdecken <span>↗</span></a
+          >
+        </div>
+      </section>
+      <section class="collection section" id="kollektion">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">DIE BOUTIQUE-KOLLEKTION</p>
+            <h2>Drei Arten,<br /><em>den Alltag zu vergessen.</em></h2>
+          </div>
+          <div class="collection-intro">
+            <p>
+              Mit Bedacht komponiert.<br />Für Ihren ganz persönlichen
+              Genussmoment.
+            </p>
+            <span class="tax-note">Alle Preise inkl. MwSt.</span>
+          </div>
+        </div>
+        <div class="filter-bar">
+          <div class="category-filters" aria-label="Kreationen filtern">
+            <button class="active" data-filter="all" aria-pressed="true">
+              Alle Kreationen <span>03</span></button
+            ><button data-filter="signatur" aria-pressed="false">
+              Klassiker</button
+            ><button data-filter="matcha" aria-pressed="false">Matcha</button
+            ><button data-filter="edition" aria-pressed="false">Gourmet</button>
+          </div>
+          <label class="allergen-select"
+            >Ernährungswünsche
+            <select id="allergen-filter">
+              <option value="all">Alle anzeigen</option>
+              <option value="gluten">Bestätigt ohne Gluten</option>
+              <option value="milk">Bestätigt ohne Milch</option>
+            </select></label
+          >
+        </div>
+        <div id="product-grid" class="product-grid"></div>
+        <p id="filter-empty" class="empty-state" hidden>
+          Für diesen Wunsch liegen noch keine bestätigten Allergenangaben vor.
+          Bitte sprechen Sie mit uns.
+        </p>
+        <div class="collection-foot">
+          <span>Bildwelten und Illustration als Serviervorschlag.</span
+          ><button class="text-link" data-legal="allergene">
+            Allergenhinweise <span>↗</span>
+          </button>
+        </div>
+      </section>
+      <section id="handwerk" class="craft">
+        <div class="craft-image">
+          <img
+            src="/assets/pancake-master.png"
+            alt="Der luftige, goldene Teig unserer japanischen Soufflé-Pancakes"
+            loading="lazy"
+            width="1344"
+            height="752"
+          /><span class="image-annotation"
+            >01 — DIE TEXTUR DER LEICHTIGKEIT</span
+          >
+        </div>
+        <div class="craft-copy">
+          <p class="eyebrow">DAS HANDWERK HINTER DEM AUGENBLICK</p>
+          <h2>Leichtigkeit<br />ist eine Frage<br /><em>der Hingabe.</em></h2>
+          <p>
+            Ein Soufflé lässt sich nicht drängen. Es braucht Luft, Wärme und das
+            richtige Gespür für den Moment. Was bleibt, ist eine zarte Textur,
+            die fast auf der Zunge schwebt.
+          </p>
+          <div class="craft-details">
+            <div>
+              <span>01</span>
+              <h3>Luftig aufgeschlagen</h3>
+              <p>Feine Poren. Ein besonders zarter Biss.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <h3>Sanft vollendet</h3>
+              <p>Goldene Ränder und ein weicher Kern.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <h3>Mit Gefühl komponiert</h3>
+              <p>Butter, Matcha und überraschende Nuancen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="speisekarte" class="menu-section section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">DIE GANZE WELT VON FLUFFY</p>
+            <h2>Für jeden Moment<br /><em>eine kleine Entdeckung.</em></h2>
+          </div>
+          <p class="section-aside">
+            Unsere Speisekarte.<br />Das weitere Sortiment und seine Preise<br />werden
+            für die Vorbestellung ergänzt.
+          </p>
+        </div>
+        <div id="menu-accordions"></div>
+        <details class="compose-menu">
+          <summary><span>Ihre eigene Komposition</span><span>＋</span></summary>
+          <p>
+            Pancake, Sauce, Früchte, Creme, Eis und Topping. Stellen Sie Ihre
+            persönliche Kombination zusammen.
+          </p>
+          <div id="composition-grid"></div>
+          <p id="composition-summary" aria-live="polite"></p>
+          <p class="subtle">
+            Besondere Extras: Dubai-Schokolade · Extra Pistazie · Frische Beeren
+            · Mochi · Extra Eis · Extra Sauce. Individuelle Kompositionen sind
+            noch nicht online bestellbar.
+          </p>
+        </details>
+      </section>
+      <section class="boutique" id="boutique">
+        <img
+          src="/assets/cafe.webp"
+          alt="Unsere gestalterische Vision: ein ruhiger, lichtdurchfluteter Raum mit japanischem Garten"
+          loading="lazy"
+          width="1280"
+          height="716"
+        />
+        <div class="boutique-card">
+          <p class="eyebrow">EIN PLATZ FÜR DAS BESONDERE</p>
+          <h2>Bleiben Sie<br /><em>noch ein wenig.</em></h2>
+          <p>
+            Eine warme Tasse. Ein leises Gespräch.<br />Und die Freiheit, den
+            Moment zu genießen.
+          </p>
+          <button class="dark-button magnetic" data-reserve>
+            Tisch reservieren <span>↗</span>
+          </button>
+          <p id="boutique-address" class="location-note">
+            Unsere Boutique in Deutschland.<br />Adresse und Öffnungszeiten
+            folgen.
+          </p>
+        </div>
+        <span class="image-credit">Atmosphärische Visualisierung</span>
+      </section>
+      <section class="closing">
+        <p class="eyebrow">VORFREUDE IST DER ERSTE GENUSS.</p>
+        <h2>Ihr nächster<br /><em>Wolkenmoment.</em></h2>
+        <a
+          href="#kollektion"
+          class="outline-button magnetic"
+          data-cursor="Bestellen"
+          >Jetzt bestellen <span>↗</span></a
+        >
+      </section>
+    </main>
+    <footer>
+      <div class="footer-main">
+        <a href="#" class="wordmark"
+          >fluffy<span>JAPANISCHE SOUFFLÉ-PÂTISSERIE</span></a
+        >
+        <p>
+          Japanische Seele.<br />Ein Hauch Pâtisserie.<br />Ein Moment nur für
+          Sie.
+        </p>
+        <div>
+          <a href="#kollektion">Vorbestellung</a
+          ><button data-reserve>Tischreservierung</button
+          ><a href="#speisekarte">Speisekarte</a>
+        </div>
+        <div>
+          <button data-legal="impressum">Impressum</button
+          ><button data-legal="datenschutz">Datenschutz</button
+          ><button data-legal="agb">AGB</button
+          ><button data-legal="allergene">Allergenhinweise</button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Fluffy</span
+        ><span>Mit Ruhe. Mit Hingabe. Mit Fluffy.</span
+        ><button id="sound-toggle" aria-pressed="false">
+          ♫ Klangkulisse: Aus
+        </button>
+      </div>
+    </footer>
+    <dialog id="cart-dialog" class="drawer" aria-labelledby="cart-title">
+      <div class="dialog-head">
+        <div>
+          <p class="eyebrow">FÜR IHREN GENUSSMOMENT</p>
+          <h2 id="cart-title">Ihre <em>Auswahl.</em></h2>
+        </div>
+        <button class="close-dialog" aria-label="Warenkorb schließen">×</button>
+      </div>
+      <div class="drawer-body" data-lenis-prevent>
+        <div id="cart-items"></div>
+        <div id="cart-summary"></div>
+        <p id="cart-receipt" class="form-status" role="status"></p>
+        <div id="checkout-area" hidden>
+          <p class="eyebrow">01 / ABHOLUNG</p>
+          <label
+            >Abholzeitfenster auswählen<select
+              id="pickup-slot"
+              required
+            ></select
+          ></label>
+          <p class="slot-note">
+            Beispielzeiten in der Vorschau. Verfügbarkeit noch nicht bestätigt.
+          </p>
+          <form id="checkout-form">
+            <p class="eyebrow">02 / IHRE ANGABEN</p>
+            <label
+              >Vor- und Nachname<input
+                name="name"
+                autocomplete="name"
+                required
+                minlength="2"
+                maxlength="100" /></label
+            ><label
+              >E-Mail-Adresse<input
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                maxlength="254"
+            /></label>
+            <p class="payment-note">
+              Vorgesehene Zahlart: Zahlung bei Abholung.
+            </p>
+            <label class="consent"
+              ><input type="checkbox" name="consent" required /><span
+                >Ich habe den
+                <button type="button" data-legal="datenschutz">
+                  Datenschutzhinweis
+                </button>
+                gelesen.</span
+              ></label
+            >
+            <div class="preview-notice">
+              Vorschau: Es wird keine Bestellung aufgegeben und nichts
+              berechnet.
+            </div>
+            <button type="submit" class="dark-button checkout-submit">
+              Bestellübersicht prüfen <span>↗</span>
+            </button>
+            <p id="order-status" class="form-status" role="status"></p>
+          </form>
+        </div>
+        <button id="clear-cart" class="small-link">Warenkorb leeren</button>
+      </div>
+    </dialog>
+    <dialog
+      id="reservation-dialog"
+      class="reservation-dialog"
+      aria-labelledby="reservation-title"
+    >
+      <div class="dialog-head">
+        <div>
+          <p class="eyebrow">ZEIT FÜR EINEN WOLKENMOMENT</p>
+          <h2 id="reservation-title">Ein Tisch<br /><em>für Sie.</em></h2>
+        </div>
+        <button class="close-dialog" aria-label="Reservierung schließen">
+          ×
+        </button>
+      </div>
+      <form id="reservation-form" data-lenis-prevent>
+        <div class="form-row">
+          <label
+            >Personen<select name="guests">
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 Personen</option>
+              <option value="3">3 Personen</option>
+              <option value="4">4 Personen</option>
+              <option value="5">5 Personen</option>
+              <option value="6">6 Personen</option>
+              <option value="7">7 Personen</option>
+              <option value="8">8 Personen</option>
+            </select></label
+          ><label
+            >Zeitfenster<select
+              id="reservation-slot"
+              name="slot"
+              required
+            ></select
+          ></label>
+        </div>
+        <p class="slot-note">
+          Beispielzeiten in der Vorschau. Verfügbarkeit noch nicht bestätigt.
+        </p>
+        <label
+          >Vor- und Nachname<input
+            name="name"
+            autocomplete="name"
+            required
+            minlength="2"
+            maxlength="100" /></label
+        ><label
+          >E-Mail-Adresse<input
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            maxlength="254" /></label
+        ><label class="consent"
+          ><input type="checkbox" name="consent" required /><span
+            >Ich habe den
+            <button type="button" data-legal="datenschutz">
+              Datenschutzhinweis
+            </button>
+            gelesen.</span
+          ></label
+        >
+        <div class="preview-notice">
+          Vorschau: Es wird kein Tisch reserviert und keine Anfrage übermittelt.
+        </div>
+        <button type="submit" class="dark-button">
+          Reservierung prüfen <span>↗</span>
+        </button>
+        <p id="reservation-status" class="form-status" role="status"></p>
+      </form>
+    </dialog>
+    <dialog
+      id="legal-dialog"
+      class="legal-dialog"
+      aria-labelledby="legal-title"
+    >
+      <div class="dialog-head">
+        <h2 id="legal-title"></h2>
+        <button class="close-dialog" aria-label="Hinweise schließen">×</button>
+      </div>
+      <div id="legal-body" data-lenis-prevent></div>
+    </dialog>
+    <div id="toast" class="toast" role="status"></div>
+    <div id="cursor" aria-hidden="true"><span></span></div>
     <noscript
       ><style>
         .story {
           height: 100svh;
         }
-        .scroll-hint {
-          display: none;
+        .product-grid:empty::after {
+          content: "Bitte aktivieren Sie JavaScript für Produktauswahl und Warenkorb.";
         }
-      </style></noscript
+      </style>
+      <p>
+        Die Online-Auswahl benötigt JavaScript. Die Boutique ist derzeit in
+        Vorbereitung.
+      </p></noscript
     >
-    <main>
-      <section class="story" aria-label="The Fluffy pancake journey">
-        <div class="stage">
-          <img
-            class="poster"
-            src="/assets/poster.webp"
-            alt="Golden Japanese soufflé pancakes with melting butter and maple syrup"
-          /><canvas aria-hidden="true"></canvas>
-          <div class="shade"></div>
-          <div class="chapter opening">
-            <p class="eyebrow">A LITTLE TASTE OF JAPAN <span>ふわふわ</span></p>
-            <h1>Happiness,<br />extra <em>fluffy.</em></h1>
-            <p class="intro">
-              Golden edges. A cloud-soft centre.<br />A little moment, just for
-              you.
-            </p>
-            <a class="discover" href="#signature"
-              >Meet our signature <span>↗</span></a
-            >
-            <p class="tiny">JAPANESE SOUFFLÉ PANCAKES</p>
-          </div>
-          <div class="chapter detail" hidden>
-            <p class="eyebrow">01 / THE LITTLE DETAILS</p>
-            <h2>Golden outside.<br /><em>Cloud within.</em></h2>
-            <p>
-              A little butter. A ribbon of maple.<br />And all that beautiful
-              air.
-            </p>
-          </div>
-          <div class="chapter ending" hidden>
-            <p class="eyebrow">02 / THE SLOW LIFE</p>
-            <h2>A little pause.<br />A lot of <em>Fluffy.</em></h2>
-            <p>
-              Warm light. Something sweet.<br />Nowhere else you need to be.
-            </p>
-          </div>
-          <div class="story-bottom">
-            <span class="scroll-hint"
-              ><span>↓</span> SCROLL TO FEEL THE FLUFF</span
-            ><span class="chapter-label">THE FIRST HELLO</span
-            ><button id="motion-toggle" aria-pressed="false">
-              Pause motion</button
-            ><a href="#signature">Skip story ↗</a>
-          </div>
-          <div class="progress" aria-hidden="true"><i></i></div>
-        </div>
-      </section>
-      <section id="signature" class="signature">
-        <div class="section-top">
-          <p class="eyebrow">THE SIGNATURE</p>
-          <span>Simple things. Beautifully done.</span>
-        </div>
-        <div class="signature-grid">
-          <div class="dish">
-            <img
-              src="/assets/poster.webp"
-              alt="Fluffy signature pancake stack on a ceramic plate"
-              loading="lazy"
-            /><span class="seal">A STACK<br />OF HAPPY<br />✳</span>
-          </div>
-          <div class="signature-copy">
-            <p class="eyebrow">ONE VERY GOOD REASON TO SLOW DOWN</p>
-            <h2>Soft enough<br />to make you <em>smile.</em></h2>
-            <p>
-              Meet our Japanese soufflé pancake. Tall, tender and wonderfully
-              light, with a golden finish, melting butter and a glossy drizzle
-              of maple syrup.
-            </p>
-            <div class="ingredients">
-              <span>01 <b>Cloud-soft crumb</b></span
-              ><span>02 <b>Golden, delicate edges</b></span
-              ><span>03 <b>Butter & maple</b></span>
-            </div>
-            <a href="#cafe" class="text-link"
-              >Find a little stillness <span>↗</span></a
-            >
-          </div>
-        </div>
-      </section>
-      <section id="cafe" class="cafe">
-        <img
-          src="/assets/cafe.webp"
-          alt="A sunlit Japanese café with a peaceful garden view"
-          loading="lazy"
-        />
-        <div class="cafe-copy">
-          <p class="eyebrow">THE FLUFFY FEELING</p>
-          <h2>Stay a little<br /><em>longer.</em></h2>
-          <p>
-            Inspired by quiet Tokyo mornings.<br />A warm plate, a window
-            seat,<br />and time to enjoy the little things.
-          </p>
-          <button id="replay">Experience it again <span>↗</span></button>
-        </div>
-        <span class="concept"
-          >A café vision for Fluffy · Location details to come</span
-        >
-      </section>
-    </main>
-    <footer>
-      <a class="brand" href="#"
-        ><img src="/assets/wordmark.png" alt="Fluffy home" /></a
-      ><span>A little pause. A lot of Fluffy.</span
-      ><a href="/style-tile.html">The Fluffy palette ↗</a
-      ><small>© <span id="year"></span> Fluffy</small>
-    </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

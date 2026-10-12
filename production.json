@@ -1,6 +1,6 @@
 {
   "brand": "Fluffy",
-  "direction": "Warm ivory, cocoa, amber maple and quiet sage. Soft wordmark, editorial serif headings, sunlit Japanese cafe photography.",
+  "direction": "Japandi luxury: warm rice paper, sumi ink, Uji matcha and amber; Cormorant Garamond with Plus Jakarta Sans.",
   "assets": [
     {
       "file": "public/assets/pancake-master.png",
@@ -24,19 +24,55 @@
       "reference": "f29e1a22-a6f0-4f4c-8bd3-dbe4d9c87897",
       "prompt": "One continuous food camera journey. 0-2s pancake stack gently jiggles. 2-6s push into melting butter, maple drip and aerated golden crumb. 6-8s extreme macro soft steam and warm bokeh. 8-13s reverse into same stack on ceramic plate in sunlit Tokyo cafe by garden window. 13-15s wide cafe. No cuts, people, logos or text.",
       "duration_requested": 15
+    },
+    {
+      "file": ".local-assets/stacking-master.mp4",
+      "provider": "Higgsfield",
+      "model": "kling_video_edit",
+      "job": "c980759c-f49e-4e2a-948e-de8b7f177883",
+      "reference": "1175f0c3-3495-47fc-934d-083ca7564994",
+      "actual": {
+        "count": 361,
+        "fps": 24,
+        "width": 1920,
+        "height": 1074,
+        "pattern": "/frames/stacking/frame-%04d.webp",
+        "totalBytes": 27054264,
+        "mobile": {
+          "count": 361,
+          "fps": 24,
+          "width": 960,
+          "height": 536,
+          "pattern": "/frames/stacking/mobile/frame-%04d.webp",
+          "totalBytes": 9421864
+        },
+        "source": {
+          "width": 3848,
+          "height": 2152,
+          "r_frame_rate": "24/1",
+          "duration": "15.041667"
+        },
+        "sourceBytes": 32600051,
+        "duration": 15.041667,
+        "poster": "/assets/stacking-poster.webp",
+        "startFrame": 48
+      },
+      "qualityReview": "Usable macro-to-cafe film. Individual sequential pancake stacking was not achieved; correction rejected by provider daily generation limit. Initial floating-stack frames omitted from playback.",
+      "requestedCorrection": "Stationary empty plate; three separate pancakes land sequentially with soft bounce; butter melts; amber caramel pours. No truffle."
     }
   ],
   "assumptions": [
-    "Cafe imagery is a concept, not a real address.",
-    "No menu prices, hours, testimonials or ordering service supplied.",
-    "Local preview only; no public publishing or GitHub remote configured."
+    "German boutique business identity, address and opening hours remain unconfirmed.",
+    "Three priced boutique products approved; third changed to caramel and butter at 18.50 EUR. Remaining PDF menu unpriced.",
+    "Order and reservation interfaces remain explicit previews until a receiving service and verified business/legal/allergen information are configured.",
+    "Cafe is a concept image; matcha uses an illustration because generation was rate limited.",
+    "User will deploy on Vercel; no deployment performed."
   ],
   "scroll": {
-    "active_viewport_heights": 6,
-    "opening_hold": 0.1,
-    "macro_end": 0.59,
-    "reveal_end": 0.92,
-    "final_hold": 0.08
+    "active_viewport_heights": 5,
+    "opening_copy_end": 0.2,
+    "final_hold": 0.07,
+    "start_frame": 48
   },
-  "logo_format": "PNG raster master; SVG companion favicon is separately authored."
+  "logo_format": "Editorial text wordmark using locally hosted Cormorant Garamond; SVG pancake favicon."
 }

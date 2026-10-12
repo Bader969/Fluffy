@@ -1,192 +1,154 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Fluffy · Identity & style tile</title>
+    <title>Fluffy — Markenatelier</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap");
-      :root {
-        --cream: #f8f3e8;
-        --cocoa: #553425;
-        --maple: #b8753d;
-        --sage: #727962;
-      }
-      * {
-        box-sizing: border-box;
-      }
       body {
         margin: 0;
-        background: var(--cream);
-        color: var(--cocoa);
+        padding: 6vw;
+        background: #fbf9f5;
+        color: #191817;
         font:
-          14px/1.6 "DM Sans",
+          14px/1.8 Arial,
           sans-serif;
-        padding: 5vw;
-      }
-      a {
-        color: inherit;
-      }
-      header {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #55342533;
-        padding-bottom: 25px;
       }
       h1,
-      h2 {
-        font-family: "Playfair Display", Georgia, serif;
+      h2,
+      .marke {
+        font-family: Georgia, serif;
         font-weight: 400;
-        line-height: 1.1;
+      }
+      .marke {
+        font-size: 110px;
+        letter-spacing: -8px;
       }
       h1 {
         font-size: 60px;
-        margin: 20px 0;
       }
       h2 {
-        font-size: 35px;
+        font-size: 32px;
       }
       em {
-        color: var(--maple);
+        color: #5b6b58;
       }
       .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 5vw;
-        margin-top: 40px;
+        gap: 6vw;
       }
-      .logo {
+      .farben {
+        display: flex;
+        gap: 14px;
+      }
+      .farben div {
+        flex: 1;
+        font-size: 10px;
+      }
+      .farben i {
+        display: block;
+        height: 80px;
+        border: 1px solid #19181720;
+        margin-bottom: 10px;
+      }
+      a {
+        color: inherit;
+      }
+      .button {
+        display: inline-block;
+        padding: 15px 25px;
+        background: #191817;
+        color: #fbf9f5;
+        text-decoration: none;
+      }
+      img {
         width: 100%;
-        max-height: 410px;
-        object-fit: contain;
-        mix-blend-mode: multiply;
+      }
+      header {
+        border-bottom: 1px solid #19181722;
+        padding-bottom: 22px;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
       }
       .label {
         font-size: 10px;
         letter-spacing: 2px;
       }
-      .swatches {
-        display: flex;
-        gap: 10px;
-      }
-      .swatches div {
-        flex: 1;
-      }
-      .swatches i {
-        height: 65px;
-        display: block;
-        border: 1px solid #55342520;
-        border-radius: 4px;
-        margin-bottom: 10px;
-      }
-      .swatches span {
-        font-size: 10px;
-      }
-      .button {
-        display: inline-block;
-        background: var(--cocoa);
-        color: var(--cream);
-        padding: 13px 24px;
-        border-radius: 30px;
-        text-decoration: none;
-      }
-      .card {
-        padding: 25px;
-        border: 1px solid #55342533;
-        border-radius: 6px;
-      }
-      .image {
-        width: 100%;
-        border-radius: 50% 50% 0 0;
+      .karte {
+        background: #f3efea;
+        padding: 35px;
       }
       footer {
-        margin-top: 50px;
-        border-top: 1px solid #55342533;
-        padding: 20px 0;
-        font-size: 12px;
+        margin-top: 60px;
+        border-top: 1px solid #19181722;
+        padding-top: 20px;
+        font-size: 11px;
       }
       @media (max-width: 650px) {
         .grid {
           grid-template-columns: 1fr;
         }
         h1 {
-          font-size: 44px;
+          font-size: 40px;
+        }
+        .farben {
+          flex-wrap: wrap;
         }
       }
     </style>
   </head>
   <body>
     <header>
-      <span>FLUFFY / IDENTITY STUDY 01</span
-      ><a href="/">Explore the website ↗</a>
+      <span>FLUFFY / MARKENATELIER</span><a href="/">Zur Boutique ↗</a>
     </header>
     <div class="grid">
       <div>
-        <img
-          class="logo"
-          src="/assets/logo-master.png"
-          alt="Fluffy pancake-stack logo"
-        />
-        <p class="label">THE WORDMARK</p>
+        <div class="marke">fluffy</div>
+        <p class="label">JAPANISCHE SOUFFLÉ-PÂTISSERIE</p>
+        <h1>Die Kunst<br />der <em>Leichtigkeit.</em></h1>
         <p>
-          Soft, rounded lettering paired with a simple pancake stack. A warm
-          welcome with just a little wobble.
+          Japandi-Ruhe trifft auf französische Pâtisserie. Feine Serifenschrift,
+          großzügiger Weißraum und eine zurückhaltende Materialwelt aus
+          Reispapier, Keramik und Sumi-Tinte.
         </p>
-        <a href="/assets/logo-master.png" download
-          >Download logo master (PNG) ↗</a
-        >
       </div>
       <div>
-        <p class="label">A LITTLE TASTE OF JAPAN</p>
-        <h1>Happiness,<br />extra <em>fluffy.</em></h1>
-        <p>
-          Warm. Airy. Quietly playful. An identity inspired by golden pancake
-          edges, handmade ceramics and unhurried café mornings.
-        </p>
-        <div class="swatches">
-          <div>
-            <i style="background: #f8f3e8"></i><span>CREAM<br />#F8F3E8</span>
-          </div>
-          <div>
-            <i style="background: #553425"></i><span>COCOA<br />#553425</span>
-          </div>
-          <div>
-            <i style="background: #b8753d"></i><span>MAPLE<br />#B8753D</span>
-          </div>
-          <div>
-            <i style="background: #727962"></i><span>SAGE<br />#727962</span>
-          </div>
+        <p class="label">DIE FARBWELT</p>
+        <div class="farben">
+          <div><i style="background: #fbf9f5"></i>REISPAPIER<br />#FBF9F5</div>
+          <div><i style="background: #f3efea"></i>KERAMIK<br />#F3EFEA</div>
+          <div><i style="background: #191817"></i>SUMI<br />#191817</div>
+          <div><i style="background: #d4a373"></i>BERNSTEIN<br />#D4A373</div>
+          <div><i style="background: #5b6b58"></i>MATCHA<br />#5B6B58</div>
+          <div><i style="background: #c6a664"></i>BLATTGOLD<br />#C6A664</div>
         </div>
-        <h2>Golden outside.<br /><em>Cloud within.</em></h2>
+        <h2>Wie eine Wolke.<br /><em>Handgefertigt in Perfektion.</em></h2>
         <p>
-          Playfair Display / editorial headings<br />DM Sans / clear, welcoming
-          body copy
+          Website-Typografie: Cormorant Garamond und Plus Jakarta Sans. Lokal
+          eingebundene Schriftdateien, klare Bedienelemente und großzügige
+          Abstände.
         </p>
-        <a class="button" href="/#signature">Meet our signature ↗</a>
+        <a class="button" href="/#kollektion">Jetzt bestellen ↗</a>
       </div>
       <img
-        class="image"
         src="/assets/poster.webp"
-        alt="Fluffy pancake photography"
+        alt="Goldene Soufflé-Pancakes mit Butter und Guss"
       />
-      <div class="card">
-        <p class="label">SIGNATURE / 01</p>
-        <h2>A stack of happy.</h2>
+      <div class="karte">
+        <p class="label">DIE SIGNATUR</p>
+        <h2>Klassische Wolke</h2>
         <p>
-          Three golden soufflé pancakes. Melting butter. Amber maple syrup. Soft
-          morning light and plenty of room to breathe.
+          Goldene Soufflé-Pancakes mit Hokkaido-Butter und reinem Ahornsirup.
         </p>
-        <p>
-          Imagery: photoreal food detail, warm ivory backgrounds, delicate
-          steam, restrained oak and garden greens.
-        </p>
-        <a href="/#cafe">Find a little stillness ↗</a>
+        <p>14,50 € · inkl. MwSt.</p>
+        <a href="/#kollektion">Kreation entdecken ↗</a>
       </div>
     </div>
     <footer>
-      Editable style tile. Logo master is raster artwork; the small pancake
-      favicon is an editable SVG. Café imagery is a brand concept, not a
-      confirmed business location.
+      Bearbeitbare Stilvorlage. Alle verbindlichen Betriebs- und Allergenangaben
+      werden vor der Freischaltung ergänzt.
     </footer>
   </body>
 </html>

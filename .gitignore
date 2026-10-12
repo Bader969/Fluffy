@@ -1,3 +1,11 @@
 node_modules/
 dist/
 *.log
+.env
+.env.local
+.env.*.local
+preview*.jpg
+contact-sheet*.jpg
+menu-page-*.png
+.vercel/
+.local-assets/
