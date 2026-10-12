@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f3e8" />
+    <meta
+      name="description"
+      content="Meet Fluffy. Golden Japanese soufflé pancakes, a cloud-soft centre, and a little moment of happiness."
+    />
+    <meta property="og:title" content="Fluffy — Happiness, extra fluffy." />
+    <meta
+      property="og:description"
+      content="A little pause. A lot of Fluffy. Discover our signature Japanese soufflé pancake."
+    />
+    <meta property="og:image" content="/assets/pancake-master.png" />
+    <title>Fluffy — Happiness, extra fluffy.</title>
+    <link rel="icon" href="/assets/icon.svg" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#signature">Skip to the pancake</a>
+    <header>
+      <a class="brand" href="#" aria-label="Fluffy home"
+        ><img src="/assets/wordmark.png" alt="Fluffy"
+      /></a>
+      <nav aria-label="Main navigation">
+        <a href="#signature">Our pancake</a><a href="#cafe">The slow life</a>
+      </nav>
+      <a class="header-cta" href="#signature"
+        >Meet your happy place <span>↗</span></a
+      >
+    </header>
+    <noscript
+      ><style>
+        .story {
+          height: 100svh;
+        }
+        .scroll-hint {
+          display: none;
+        }
+      </style></noscript
+    >
+    <main>
+      <section class="story" aria-label="The Fluffy pancake journey">
+        <div class="stage">
+          <img
+            class="poster"
+            src="/assets/poster.webp"
+            alt="Golden Japanese soufflé pancakes with melting butter and maple syrup"
+          /><canvas aria-hidden="true"></canvas>
+          <div class="shade"></div>
+          <div class="chapter opening">
+            <p class="eyebrow">A LITTLE TASTE OF JAPAN <span>ふわふわ</span></p>
+            <h1>Happiness,<br />extra <em>fluffy.</em></h1>
+            <p class="intro">
+              Golden edges. A cloud-soft centre.<br />A little moment, just for
+              you.
+            </p>
+            <a class="discover" href="#signature"
+              >Meet our signature <span>↗</span></a
+            >
+            <p class="tiny">JAPANESE SOUFFLÉ PANCAKES</p>
+          </div>
+          <div class="chapter detail" hidden>
+            <p class="eyebrow">01 / THE LITTLE DETAILS</p>
+            <h2>Golden outside.<br /><em>Cloud within.</em></h2>
+            <p>
+              A little butter. A ribbon of maple.<br />And all that beautiful
+              air.
+            </p>
+          </div>
+          <div class="chapter ending" hidden>
+            <p class="eyebrow">02 / THE SLOW LIFE</p>
+            <h2>A little pause.<br />A lot of <em>Fluffy.</em></h2>
+            <p>
+              Warm light. Something sweet.<br />Nowhere else you need to be.
+            </p>
+          </div>
+          <div class="story-bottom">
+            <span class="scroll-hint"
+              ><span>↓</span> SCROLL TO FEEL THE FLUFF</span
+            ><span class="chapter-label">THE FIRST HELLO</span
+            ><button id="motion-toggle" aria-pressed="false">
+              Pause motion</button
+            ><a href="#signature">Skip story ↗</a>
+          </div>
+          <div class="progress" aria-hidden="true"><i></i></div>
+        </div>
+      </section>
+      <section id="signature" class="signature">
+        <div class="section-top">
+          <p class="eyebrow">THE SIGNATURE</p>
+          <span>Simple things. Beautifully done.</span>
+        </div>
+        <div class="signature-grid">
+          <div class="dish">
+            <img
+              src="/assets/poster.webp"
+              alt="Fluffy signature pancake stack on a ceramic plate"
+              loading="lazy"
+            /><span class="seal">A STACK<br />OF HAPPY<br />✳</span>
+          </div>
+          <div class="signature-copy">
+            <p class="eyebrow">ONE VERY GOOD REASON TO SLOW DOWN</p>
+            <h2>Soft enough<br />to make you <em>smile.</em></h2>
+            <p>
+              Meet our Japanese soufflé pancake. Tall, tender and wonderfully
+              light, with a golden finish, melting butter and a glossy drizzle
+              of maple syrup.
+            </p>
+            <div class="ingredients">
+              <span>01 <b>Cloud-soft crumb</b></span
+              ><span>02 <b>Golden, delicate edges</b></span
+              ><span>03 <b>Butter & maple</b></span>
+            </div>
+            <a href="#cafe" class="text-link"
+              >Find a little stillness <span>↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="cafe" class="cafe">
+        <img
+          src="/assets/cafe.webp"
+          alt="A sunlit Japanese café with a peaceful garden view"
+          loading="lazy"
+        />
+        <div class="cafe-copy">
+          <p class="eyebrow">THE FLUFFY FEELING</p>
+          <h2>Stay a little<br /><em>longer.</em></h2>
+          <p>
+            Inspired by quiet Tokyo mornings.<br />A warm plate, a window
+            seat,<br />and time to enjoy the little things.
+          </p>
+          <button id="replay">Experience it again <span>↗</span></button>
+        </div>
+        <span class="concept"
+          >A café vision for Fluffy · Location details to come</span
+        >
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="#"
+        ><img src="/assets/wordmark.png" alt="Fluffy home" /></a
+      ><span>A little pause. A lot of Fluffy.</span
+      ><a href="/style-tile.html">The Fluffy palette ↗</a
+      ><small>© <span id="year"></span> Fluffy</small>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

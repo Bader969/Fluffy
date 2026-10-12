@@ -1,0 +1,42 @@
+{
+  "brand": "Fluffy",
+  "direction": "Warm ivory, cocoa, amber maple and quiet sage. Soft wordmark, editorial serif headings, sunlit Japanese cafe photography.",
+  "assets": [
+    {
+      "file": "public/assets/pancake-master.png",
+      "provider": "Higgsfield",
+      "model": "gpt_image_2_5",
+      "job": "f29e1a22-a6f0-4f4c-8bd3-dbe4d9c87897",
+      "prompt": "Luxury editorial food photograph. Three tall golden Japanese souffle pancakes, ivory ceramic plate, melting butter, glossy maple syrup and delicate steam. Stack center-right, cream negative space left, warm morning light. No text."
+    },
+    {
+      "file": "public/assets/logo-master.png",
+      "provider": "Higgsfield",
+      "model": "gpt_image_2_5",
+      "job": "aa59d3ea-4f04-4169-907f-e518c8fa4b9f",
+      "prompt": "Fluffy logo, rounded flowing lowercase wordmark, pancake-stack emblem, cream background and dark cocoa ink; Japanese souffle pancakes descriptor. Flat brand artwork."
+    },
+    {
+      "file": "public/assets/story-original.mp4",
+      "provider": "Higgsfield",
+      "model": "kling3_0",
+      "job": "1175f0c3-3495-47fc-934d-083ca7564994",
+      "reference": "f29e1a22-a6f0-4f4c-8bd3-dbe4d9c87897",
+      "prompt": "One continuous food camera journey. 0-2s pancake stack gently jiggles. 2-6s push into melting butter, maple drip and aerated golden crumb. 6-8s extreme macro soft steam and warm bokeh. 8-13s reverse into same stack on ceramic plate in sunlit Tokyo cafe by garden window. 13-15s wide cafe. No cuts, people, logos or text.",
+      "duration_requested": 15
+    }
+  ],
+  "assumptions": [
+    "Cafe imagery is a concept, not a real address.",
+    "No menu prices, hours, testimonials or ordering service supplied.",
+    "Local preview only; no public publishing or GitHub remote configured."
+  ],
+  "scroll": {
+    "active_viewport_heights": 6,
+    "opening_hold": 0.1,
+    "macro_end": 0.59,
+    "reveal_end": 0.92,
+    "final_hold": 0.08
+  },
+  "logo_format": "PNG raster master; SVG companion favicon is separately authored."
+}
