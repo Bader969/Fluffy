@@ -59,6 +59,13 @@
       },
       "qualityReview": "Usable macro-to-cafe film. Individual sequential pancake stacking was not achieved; correction rejected by provider daily generation limit. Initial floating-stack frames omitted from playback.",
       "requestedCorrection": "Stationary empty plate; three separate pancakes land sequentially with soft bounce; butter melts; amber caramel pours. No truffle."
+    },
+    {
+      "file": "public/assets/matcha-photo.webp",
+      "provider": "Higgsfield",
+      "model": "gpt_image_2_5",
+      "job": "d8a68662-667a-4478-97ff-55b8940fb9c3",
+      "review": "Centered golden stack with matcha sauce and white chocolate cream, matches requested product."
     }
   ],
   "assumptions": [
@@ -70,9 +77,21 @@
   ],
   "scroll": {
     "active_viewport_heights": 5,
-    "opening_copy_end": 0.2,
     "final_hold": 0.07,
-    "start_frame": 48
+    "source_trim_seconds": 2
   },
-  "logo_format": "Editorial text wordmark using locally hosted Cormorant Garamond; SVG pancake favicon."
+  "logo_format": "Editorial text wordmark using locally hosted Cormorant Garamond; SVG pancake favicon.",
+  "mvp": {
+    "mode": "brand-and-menu",
+    "commerce": false,
+    "paragraphPixels": "17–20",
+    "media": "fully buffered H264, all frames keyframes, serial seeks",
+    "desktopBytes": 7491172,
+    "mobileBytes": 5362869,
+    "legalStatus": "Operator identity, address and contact missing; legal pages incomplete"
+  },
+  "pendingVideoCorrection": {
+    "job": "e175cba6-58a5-4df3-b1f5-9a121adbb32a",
+    "status": "in_progress"
+  }
 }

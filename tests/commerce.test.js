@@ -93,7 +93,7 @@ test("reservation rejects unsupported party sizes", () => {
     ),
   );
 });
-test("unconfigured production API never acknowledges an order", async () => {
+test("brand MVP permanently rejects commerce requests", async () => {
   const previous = process.env.COMMERCE_ENABLED;
   process.env.COMMERCE_ENABLED = "false";
   let code, payload;
@@ -109,7 +109,7 @@ test("unconfigured production API never acknowledges an order", async () => {
     },
   };
   await handler({ method: "POST", headers: {}, body: {} }, res);
-  assert.equal(code, 503);
+  assert.equal(code, 410);
   assert.equal(payload.accepted, undefined);
   if (previous === undefined) delete process.env.COMMERCE_ENABLED;
   else process.env.COMMERCE_ENABLED = previous;

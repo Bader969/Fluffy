@@ -27,7 +27,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font: 13px/1.8 var(--sans);
+  font: 18px/1.75 var(--sans);
   -webkit-font-smoothing: antialiased;
 }
 button,
@@ -105,7 +105,7 @@ em {
   color: var(--matcha);
 }
 .eyebrow {
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 2.3px;
   line-height: 1.8;
@@ -144,14 +144,14 @@ em {
 }
 .wordmark > span {
   display: block;
-  font: 7px/1.8 var(--sans);
+  font: 12px/1.8 var(--sans);
   letter-spacing: 1.65px;
   margin-top: 13px;
 }
 .site-header nav {
   display: flex;
   gap: 32px;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.4px;
 }
 .site-header nav a {
@@ -178,7 +178,7 @@ em {
   display: flex;
   gap: 25px;
   align-items: center;
-  font-size: 10px;
+  font-size: 14px;
 }
 .reservation-link {
   padding: 10px 0;
@@ -196,7 +196,7 @@ em {
   border: 1px solid var(--line);
   border-radius: 50%;
   margin-left: 8px;
-  font-size: 9px;
+  font-size: 14px;
 }
 .story {
   height: 600svh;
@@ -210,7 +210,7 @@ em {
   background: var(--ceramic);
 }
 .hero-poster,
-#story-canvas,
+#story-video,
 .hero-wash {
   position: absolute;
   inset: 0;
@@ -221,7 +221,7 @@ em {
 .hero-poster {
   object-position: 63% center;
 }
-#story-canvas {
+#story-video {
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -236,7 +236,7 @@ em {
 }
 .hero-description {
   color: #5b5146;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.9;
   margin: 24px 0 28px;
 }
@@ -247,7 +247,7 @@ em {
   align-items: center;
   justify-content: space-between;
   padding: 17px 24px;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.4px;
   min-height: 50px;
   background: var(--ink);
@@ -275,7 +275,7 @@ em {
   right: 3%;
   top: 36%;
   writing-mode: vertical-rl;
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 3px;
 }
 .hero-caption {
@@ -299,11 +299,11 @@ em {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 8px;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 .story-controls button {
-  font-size: 8px;
+  font-size: 14px;
   padding: 0;
   border-bottom: 1px solid currentColor;
 }
@@ -314,7 +314,7 @@ em {
   font-size: 23px;
 }
 .scroll-cue span {
-  font-size: 8px;
+  font-size: 14px;
   letter-spacing: 1.5px;
 }
 .progress {
@@ -347,7 +347,7 @@ em {
   align-items: center;
 }
 .philosophy-bottom > p {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
   max-width: 420px;
 }
@@ -362,7 +362,7 @@ em {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  font-size: 10px;
+  font-size: 14px;
   padding: 4px 0;
   white-space: nowrap;
 }
@@ -387,7 +387,7 @@ em {
   margin-bottom: 0;
 }
 .collection-intro {
-  font-size: 12px;
+  font-size: 14px;
   padding-bottom: 8px;
 }
 .collection-intro p {
@@ -395,7 +395,7 @@ em {
 }
 .tax-note,
 .subtle {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 .filter-bar {
@@ -411,7 +411,7 @@ em {
   gap: 25px;
 }
 .category-filters button {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
   padding: 5px 0;
   border-bottom: 1px solid transparent;
@@ -421,7 +421,7 @@ em {
   border-color: var(--ink);
 }
 .category-filters span {
-  font-size: 8px;
+  font-size: 14px;
   vertical-align: super;
   margin-left: 5px;
 }
@@ -429,7 +429,7 @@ em {
   display: flex !important;
   align-items: center;
   gap: 15px;
-  font-size: 9px !important;
+  font-size: 14px !important;
   margin: 0 !important;
   color: var(--muted);
 }
@@ -439,7 +439,7 @@ em {
   border-bottom: 1px solid var(--line);
   background: none;
   padding: 8px 0;
-  font-size: 9px;
+  font-size: 14px;
 }
 .product-grid {
   display: grid;
@@ -471,14 +471,14 @@ em {
   position: absolute;
   top: 20px;
   left: 20px;
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 .product-note {
   position: absolute;
   bottom: 18px;
   left: 20px;
-  font-size: 8px;
+  font-size: 14px;
   letter-spacing: 1.4px;
   background: #fbf9f5d9;
   padding: 5px 9px;
@@ -516,11 +516,11 @@ em {
   margin-bottom: 12px;
 }
 .price {
-  font-size: 11px;
+  font-size: 14px;
   white-space: nowrap;
 }
 .product-info p {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.9;
   max-width: 340px;
@@ -534,7 +534,7 @@ em {
 .ingredient-tags span {
   border: 1px solid #19181720;
   padding: 2px 7px;
-  font-size: 8px;
+  font-size: 14px;
   color: #726b63;
 }
 .collection-foot {
@@ -544,7 +544,7 @@ em {
   margin-top: 15px;
   border-top: 1px solid var(--line);
   padding-top: 20px;
-  font-size: 9px;
+  font-size: 14px;
   color: var(--muted);
 }
 .empty-state {
@@ -578,12 +578,12 @@ em {
   background: #fbf9f5da;
   padding: 8px 12px;
   letter-spacing: 1.5px;
-  font-size: 8px;
+  font-size: 14px;
 }
 .craft-copy > p:not(.eyebrow) {
   max-width: 385px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   margin: 28px 0 35px;
 }
 .craft-details {
@@ -598,7 +598,7 @@ em {
   position: absolute;
   left: 0;
   top: 24px;
-  font-size: 8px;
+  font-size: 14px;
   color: var(--gold);
 }
 .craft-details h3 {
@@ -606,7 +606,7 @@ em {
   margin: 0 0 5px;
 }
 .craft-details p {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
   margin: 0;
 }
@@ -614,7 +614,7 @@ em {
   border-top: 1px solid var(--line);
 }
 .section-aside {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.9;
 }
@@ -656,14 +656,14 @@ details[open] summary > span:last-child {
   margin-bottom: 7px;
 }
 .menu-item p {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   margin: 0;
 }
 .compose-menu > p {
   max-width: 600px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
 }
 #composition-grid {
   display: grid;
@@ -699,7 +699,7 @@ details[open] summary > span:last-child {
   font-size: 70px;
 }
 .boutique-card > p:not(.eyebrow) {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
 }
 .boutique-card .dark-button {
@@ -708,14 +708,14 @@ details[open] summary > span:last-child {
 .location-note {
   border-top: 1px solid var(--line);
   padding-top: 20px;
-  font-size: 10px !important;
+  font-size: 14px !important;
   margin: 0;
 }
 .image-credit {
   position: absolute;
   bottom: 20px;
   right: 25px;
-  font-size: 8px;
+  font-size: 14px;
   color: var(--paper);
   text-shadow: 0 1px 3px #000;
 }
@@ -745,10 +745,10 @@ footer {
   font-size: 95px;
 }
 .footer-main .wordmark span {
-  font-size: 7px;
+  font-size: 14px;
 }
 .footer-main p {
-  font-size: 11px;
+  font-size: 14px;
   color: #c3bfb7;
 }
 .footer-main > div {
@@ -756,11 +756,11 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 13px;
-  font-size: 10px;
+  font-size: 14px;
 }
 .footer-main button {
   padding: 0;
-  font-size: 10px;
+  font-size: 14px;
   color: #c3bfb7;
 }
 .footer-main a:hover,
@@ -773,13 +773,13 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 8px;
+  font-size: 14px;
   color: #c3bfb7;
   letter-spacing: 0.5px;
 }
 .footer-bottom button {
   color: #c3bfb7;
-  font-size: 9px;
+  font-size: 14px;
   padding: 0;
 }
 dialog {
@@ -811,7 +811,7 @@ dialog::backdrop {
   border-bottom: 1px solid var(--line);
 }
 .dialog-head .eyebrow {
-  font-size: 8px;
+  font-size: 14px;
   margin-bottom: 15px;
 }
 .dialog-head h2 {
@@ -847,7 +847,7 @@ dialog::backdrop {
   margin: 3px 0 10px;
 }
 .cart-item .price {
-  font-size: 11px;
+  font-size: 14px;
 }
 .quantity {
   display: flex;
@@ -861,7 +861,7 @@ dialog::backdrop {
   line-height: 1;
 }
 .quantity span {
-  font-size: 11px;
+  font-size: 14px;
 }
 .cart-item > .remove-item {
   font-size: 18px;
@@ -881,7 +881,7 @@ dialog::backdrop {
 }
 .cart-total small {
   display: block;
-  font-size: 9px;
+  font-size: 14px;
   color: var(--muted);
 }
 .empty-cart {
@@ -892,7 +892,7 @@ label {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  font-size: 10px;
+  font-size: 14px;
   margin-bottom: 20px;
 }
 input,
@@ -904,14 +904,14 @@ select {
   padding: 12px;
   width: 100%;
   min-height: 45px;
-  font-size: 12px;
+  font-size: 14px;
 }
 select {
   background-color: var(--paper);
 }
 .slot-note,
 .payment-note {
-  font-size: 9px;
+  font-size: 14px;
   color: var(--muted);
   margin-top: -8px;
   margin-bottom: 24px;
@@ -920,7 +920,7 @@ select {
   flex-direction: row;
   align-items: flex-start;
   gap: 10px;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.7;
 }
 .consent input {
@@ -937,7 +937,7 @@ select {
   padding: 0;
 }
 .preview-notice {
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.8;
   padding: 14px;
   background: var(--ceramic);
@@ -948,7 +948,7 @@ select {
   margin-top: 5px;
 }
 .form-status {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.8;
   margin-top: 18px;
 }
@@ -956,7 +956,7 @@ select {
   color: #9b3434;
 }
 .small-link {
-  font-size: 9px;
+  font-size: 14px;
   text-decoration: underline;
   color: var(--muted);
   padding: 15px 0;
@@ -996,7 +996,7 @@ select {
   padding: 30px 35px;
   overflow: auto;
   max-height: 65dvh;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.9;
 }
 .toast {
@@ -1007,7 +1007,7 @@ select {
   background: var(--ink);
   color: var(--paper);
   padding: 13px 24px;
-  font-size: 11px;
+  font-size: 14px;
   z-index: 40;
   opacity: 0;
   pointer-events: none;
@@ -1046,13 +1046,13 @@ select {
   border-color: transparent;
 }
 #cursor span {
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 0.4px;
 }
 .reduced .story {
   height: 100svh;
 }
-.reduced #story-canvas {
+.reduced #story-video {
   display: none;
 }
 .reduced #motion-toggle {
@@ -1106,7 +1106,7 @@ select {
     height: 670px;
   }
   .story-controls {
-    font-size: 7px;
+    font-size: 14px;
   }
   .story-step {
     display: none;
@@ -1128,7 +1128,7 @@ select {
     letter-spacing: -3px;
   }
   .wordmark > span {
-    font-size: 5px;
+    font-size: 14px;
     letter-spacing: 1.2px;
     margin-top: 10px;
   }
@@ -1136,7 +1136,7 @@ select {
     display: none;
   }
   .header-actions {
-    font-size: 9px;
+    font-size: 14px;
     gap: 12px;
   }
   .reservation-link {
@@ -1146,7 +1146,7 @@ select {
     line-height: 1.5;
   }
   .bag-button {
-    font-size: 9px;
+    font-size: 14px;
   }
   .stage {
     min-height: 680px;
@@ -1164,18 +1164,18 @@ select {
     font-size: 51px;
   }
   .eyebrow {
-    font-size: 8px;
+    font-size: 14px;
     letter-spacing: 1.7px;
     margin-bottom: 21px;
   }
   .hero-description {
-    font-size: 11px;
+    font-size: 14px;
     margin: 22px 0;
   }
   .hero-copy .dark-button {
     padding: 13px 18px;
     min-height: 44px;
-    font-size: 9px;
+    font-size: 14px;
   }
   .hero-wash {
     background: linear-gradient(
@@ -1196,13 +1196,13 @@ select {
     left: 6%;
     right: 6%;
     gap: 12px;
-    font-size: 7px;
+    font-size: 14px;
   }
   .scroll-cue span {
     display: none;
   }
   .story-controls button {
-    font-size: 7px;
+    font-size: 14px;
   }
   .scroll-cue {
     font-size: 22px;
@@ -1235,7 +1235,7 @@ select {
     justify-self: center;
   }
   .philosophy-bottom > p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .japanese {
     font-size: 22px;
@@ -1253,7 +1253,7 @@ select {
   }
   .collection-intro {
     margin-top: 25px;
-    font-size: 11px;
+    font-size: 14px;
     max-width: none;
     display: flex;
     justify-content: space-between;
@@ -1264,7 +1264,7 @@ select {
     margin: 0;
   }
   .tax-note {
-    font-size: 8px;
+    font-size: 14px;
     white-space: nowrap;
   }
   .filter-bar {
@@ -1276,7 +1276,7 @@ select {
     gap: 23px;
   }
   .category-filters button {
-    font-size: 9px;
+    font-size: 14px;
   }
   .allergen-select {
     justify-content: space-between;
@@ -1297,7 +1297,7 @@ select {
   }
   .product-info p {
     min-height: 0;
-    font-size: 12px;
+    font-size: 14px;
   }
   .product-info {
     padding-top: 20px;
@@ -1307,12 +1307,12 @@ select {
   }
   .collection-foot {
     gap: 20px;
-    font-size: 8px;
+    font-size: 14px;
     border: 0;
     padding-top: 10px;
   }
   .collection-foot .text-link {
-    font-size: 9px;
+    font-size: 14px;
   }
   .craft {
     grid-template-columns: 1fr;
@@ -1372,7 +1372,7 @@ select {
     font-size: 65px;
   }
   .closing .eyebrow {
-    font-size: 7px;
+    font-size: 14px;
   }
   .footer-main {
     grid-template-columns: 1fr 1fr;
@@ -1382,15 +1382,15 @@ select {
     font-size: 74px;
   }
   .footer-main .wordmark span {
-    font-size: 5px;
+    font-size: 14px;
   }
   .footer-main p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .footer-bottom {
     flex-wrap: wrap;
     gap: 20px;
-    font-size: 7px;
+    font-size: 14px;
   }
   .footer-bottom > span:nth-child(2) {
     display: none;
@@ -1420,7 +1420,7 @@ select {
     width: max-content;
     max-width: 90%;
     text-align: center;
-    font-size: 10px;
+    font-size: 14px;
   }
   .legal-dialog .dialog-head h2 {
     font-size: 35px;
@@ -1446,4 +1446,60 @@ select {
 }
 .cart-item img {
   object-position: 65% center;
+}
+
+/* Readable editorial typography across desktop and handheld screens. */
+p:not(.eyebrow), .product-info p, .menu-item p, .philosophy-bottom > p,
+.craft-copy > p:not(.eyebrow), .craft-details p, .boutique-card > p:not(.eyebrow),
+.footer-main p, .section-aside, .collection-intro p, #legal-body p {
+  font-size: clamp(17px, 1.15vw, 20px); line-height: 1.75;
+}
+.hero-description { font-size: 19px !important; }
+.eyebrow { font-size: 14px; letter-spacing: 1.5px; }
+.dark-button, .outline-button, .text-link, .site-header nav, .header-actions,
+.category-filters button, select, .price, footer a, footer button { font-size: 16px; }
+select { min-height: 48px; }
+.category-filters { flex-wrap: wrap; }
+.category-filters button { min-height: 44px; }
+.product-title-line { flex-wrap: wrap; gap: 10px; }
+.product-title-line .price { white-space: nowrap; }
+.collection-intro { max-width: 360px; }
+.collection-foot { flex-wrap: wrap; }
+.hero-copy { max-width: 60%; }
+.story-controls { gap: 22px; font-size: 14px; padding: 12px 16px; background: #fbf9f5dc; border-radius: 2px; }
+.story-controls button { font-size: 14px; min-height: 44px; }
+.scroll-cue span { font-size: 12px; letter-spacing: .6px; }
+.story-controls > a:last-of-type { font-size: 14px; }
+#story-video { object-fit: cover; object-position: center; }
+.story-status { position: absolute; right: 5%; top: 135px; padding: 8px 14px; background: #fbf9f5e8; font-size: 14px; }
+.drawer[open] { display: flex; flex-direction: column; }
+.drawer-body { height: auto; flex: 1; min-height: 0; }
+@media(max-width:1100px) { .site-header nav { display:none; } .story-step { display:none; } }
+@media(max-width:700px) {
+  .site-header { height: 94px; }
+  .wordmark > span { display:none; }
+  .header-actions { font-size:16px; }
+  .hero-copy { max-width: none; top: 20%; }
+  .hero-copy .dark-button { font-size:16px; }
+  h1 { font-size:clamp(53px, 15vw, 69px); }
+  .hero-description { font-size:17px !important; }
+  .hero-copy .eyebrow { max-width:260px; font-size:13px; }
+  .story-controls { left:4%; right:4%; bottom:14px; gap:12px; padding:5px 12px; }
+  .story-controls button, .story-controls > a:last-of-type { font-size:13px; line-height:1.4; }
+  .story-controls > a:last-of-type { max-width:110px; }
+  #story-video { object-position:74% center; }
+  .story-status { top:106px; }
+  .collection-intro { display:block; }
+  .collection-intro .tax-note { display:block; margin-top:16px; }
+  .category-filters { gap:12px 20px; }
+  .allergen-select { flex-wrap:wrap; }
+  .product-title-line h3 { font-size:32px; }
+  .product-note { max-width:80%; }
+  .boutique { height:auto; min-height:950px; }
+  .boutique-card { padding:28px; }
+  .footer-main { grid-template-columns:1fr; gap:28px; }
+  .footer-main .wordmark span { display:block; font-size:12px; }
+  #composition-grid { grid-template-columns:1fr; }
+  .dialog-head h2 { font-size:40px; overflow-wrap:anywhere; }
+  .legal-dialog #legal-body { padding:24px; }
 }

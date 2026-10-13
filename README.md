@@ -1,74 +1,55 @@
-# Fluffy — Japanische Soufflé-Pâtisserie
+# Fluffy — Marken-MVP
 
-Deutschsprachige Boutique mit filmischer Scroll-Erzählung, Produktauswahl, Warenkorb, Abholzeitfenstern und Reservierungsoberfläche. Vite, modulare JavaScript-Dateien, Lenis, GSAP und SplitType. Schriften werden lokal ausgeliefert.
+Deutschsprachige Marken- und Speisekarten-Website mit scrollgesteuertem Pancake-Film. **Keine Bestellannahme, kein Warenkorb und keine Reservierung.** Diese Ausrichtung wurde für den ersten MVP ausdrücklich gewählt.
 
-## Lokal starten
+## Start, Prüfung und Vercel
 
 ```sh
-npm install
-npm run dev
+npm ci
+npm test
+npm run build
+npm run preview
 ```
 
-`npm test` prüft Preise, Warenkorb, Zeitfenster und Bestellvalidierung. `npm run build` erzeugt `dist/`. Die lokale API liefert ausdrücklich eine Vorschau und nimmt keine Bestellungen an.
+Vercel: Repository `Bader969/Fluffy`, Branch `main`, Framework **Vite**, Build `npm run build`, Ausgabe `dist`. Keine Umgebungsvariablen oder externen Dienste nötig. Die aktuelle Domain ist `https://fluffy-chi.vercel.app/`; bei einem Domainwechsel Canonical-/Open-Graph-Tags, Sitemap und robots.txt anpassen.
 
-## Auf Vercel veröffentlichen
+`npm run dev` startet die Entwicklung auf Port 5173. `npm run preview` prüft den tatsächlichen Build auf Port 4173.
 
-1. Das GitHub-Repository `Bader969/Fluffy` in Vercel importieren.
-2. Framework: Vite. Build: `npm run build`. Ausgabe: `dist`. Stammverzeichnis: Repository-Wurzel. Die Einstellungen sind in `vercel.json` hinterlegt.
-3. Ohne Umgebungsvariablen bleiben Warenkorb und Reservierung eine deutlich gekennzeichnete Vorschau.
-4. Vor dem Geschäftsbetrieb Betreiber- und Kontaktdaten, Öffnungszeiten, vollständige Allergenmatrix und die tatsächlichen Rechtstexte ergänzen. Danach die Bestellannahme anschließen und mit einer Testbestellung prüfen.
+## Was der MVP enthält
 
-Eine Auszeichnung durch Awwwards ist kein zugesicherter Bestandteil. Das Design folgt dem gewünschten hohen gestalterischen Anspruch.
+- Editoriales Japandi-Design, lokal ausgelieferte Schriften, Absätze mit 17–20 px, lesbare Beschriftungen und Bedienelemente.
+- Drei freigegebene Boutique-Kreationen: Klassische Wolke (14,50 €), Uji Matcha Traum (16,00 €), Karamell & Butter (18,50 €). Kein Trüffelprodukt.
+- Weitere Speisekarte aus der bereitgestellten PDF, ohne erfundene Preise. Produktkarten und Speisekarte werden als HTML vorgerendert und sind auch ohne JavaScript lesbar.
+- Filter und Kompositionsvorschläge; noch nicht bestätigte Allergene werden niemals als allergenfrei ausgewiesen.
+- Pause, Geschichte überspringen, reduzierte Bewegung, Tastaturbedienung und freiwillige synthetische Klangkulisse.
+- Impressum, Datenschutz und Allergenhinweise mit eigenen HTML-Adressen; mit JavaScript zusätzlich als Dialog.
+- Keine Kundendatenformulare, keine Analytics, kein neuer Local-Storage-Warenkorb. Die frühere Commerce-API antwortet dauerhaft mit HTTP 410.
 
-## Inhalte bearbeiten
+## Vor einem rechtlich vollständigen öffentlichen Betrieb offen
 
-- `src/catalog.js`: Boutique-Kreationen, Cent-Preise, deutsch übernommene PDF-Speisekarte und individuelle Kombinationen. Drei Preise wurden vom Auftraggeber vorgegeben. Die dritte Kreation wurde auf Wunsch zu **Karamell & Butter** geändert; der freigegebene Preis von 18,50 € bleibt erhalten.
-- `index.html`: Haupttexte, Navigation, Formulare und Struktur.
-- `src/style.css`: Reispapier-, Keramik-, Sumi-, Bernstein-, Matcha- und Goldtöne; responsive Gestaltung.
-- `src/story.js`: gepinnte Filmsequenz, Rückwärtsscrollen, Pausensteuerung, begrenzter Bildspeicher, kleinere Mobilsequenz.
-- `src/motion.js`: Lenis/GSAP-Synchronisierung, SplitType, Magneteffekte und freiwillig aktivierte synthetische Klangkulisse. Kein Audio startet automatisch.
-- `src/main.js`: Warenkorb, Filter, Formulare und Vorschauzustände.
-- `src/legal.js`: klar als unvollständig bezeichnete Rechtstexte. **Vor dem öffentlichen Geschäftsbetrieb ersetzen und prüfen lassen.**
-- `public/style-tile.html`: deutsche Stilvorlage.
-- `api/commerce.js`: Vercel-Funktion zur serverseitigen Preisprüfung und bestätigten Weitergabe an ein angeschlossenes Annahmesystem.
+**Betreiber/Firmierung, ladungsfähige Anschrift und Kontakt-E-Mail fehlen.** Gegebenenfalls Registerdaten/USt-ID ergänzen. `src/legal.js` enthält ausdrücklich unvollständige Hinweise; diese müssen anhand der echten Betriebs- und Hostingdaten vervollständigt werden. Auch Adresse/Öffnungszeiten in `index.html` und die bestätigte Allergenmatrix fehlen. Technische Deploybarkeit bedeutet nicht, dass diese fehlenden Angaben ersetzt wurden.
 
-## Bestellannahme anschließen
+## Scroll-Film: Version 2
 
-Alle Variablen aus `.env.example` werden in Vercel hinterlegt. Geheimnisse nicht ins Repository schreiben. `COMMERCE_ENABLED`, `LEGAL_APPROVED` und `ALLERGENS_VERIFIED` bleiben zunächst `false`. Die Flags ersetzen keine tatsächliche Prüfung: Rechtstexte, Betriebsdaten und `allergensVerified`/`freeFrom` im Katalog müssen vorher sachlich ergänzt werden. Vorgesehene Zahlungsart ist Zahlung bei Abholung; es wurde kein Zahlungsanbieter ausgewählt und keine Zahlung integriert.
+Die frühere Lösung lud 361 einzelne WebP-Bilder während des Scrollens nach und hielt nur einen kleinen Ausschnitt im dekodierten Cache. Bei CDN-Latenz führte das zu fehlenden Zwischenbildern und stockender Wiedergabe.
 
-`AVAILABILITY_URL` ist ein HTTPS-Endpunkt des Annahmesystems. Er bekommt `Authorization: Bearer <COMMERCE_WEBHOOK_SECRET>` und muss echte freie Zeitfenster zurückgeben:
+Die neue Lösung lädt **eine vollständige H.264-Datei** vor der Freigabe der Animation (Desktop etwa 7,5 MB / Mobile etwa 5,4 MB). Jedes Bild ist ein unabhängig dekodierbares Keyframe. Scrollziele werden zusammengeführt; es läuft höchstens ein Seek gleichzeitig. Ein kurzer, zeitbasierter Übergang glättet schnelle Richtungswechsel. Während des Scrollens gibt es keine weiteren Medienanfragen. Bei Fehlern, Datensparmodus oder reduzierter Bewegung bleibt ein lesbarer statischer Einstieg.
 
-```json
-{"slots":[{"id":"2026-10-13T14:30","label":"Morgen, 14:30 – 14:45 Uhr"}]}
-```
+`src/story.js` steuert Wiedergabe und Lebenszyklus; `src/story-timing.js` enthält die geprüfte Zeitabbildung. Das Video wird stumm und inline dargestellt. Der Master stammt aus Higgsfield: 3848 × 2152 Pixel, 24 fps. Für zuverlässige Browserwiedergabe werden 1280 bzw. 960 Pixel breite Versionen ausgeliefert. Die ersten zwei Sekunden mit einem schwebenden Stapel sind entfernt. Die Original-Makrofahrt endet im Café; das separate Aufsetzen einzelner Pancakes wurde vom Modell nicht erreicht, und eine Korrektur scheiterte am Higgsfield-Tageslimit.
 
-Die Beispielwerte sind keine bestätigten Öffnungszeiten. Zeiten beziehen sich auf Europe/Berlin, liegen innerhalb der nächsten sieben Tage und mindestens 45 Minuten in der Zukunft. Der Empfänger muss Kapazitäten für Abholung und Reservierung verbindlich prüfen.
+`node scripts/prepare-scroll-video.mjs` erstellt die zwei optimierten Videos aus `.local-assets/stacking-master.mp4` (FFmpeg erforderlich). Der Master und die alten WebP-Sequenzen liegen nur im lokalen Archiv und werden nicht mehr deployt. Neue Exporte benötigen eine neue Versionsnummer im Dateinamen und in `src/story.js`, damit CDN-Caches korrekt wechseln.
 
-`COMMERCE_WEBHOOK_URL` erhält die serverseitig geprüfte Bestellung oder Reservierung als JSON. Pflicht: dauerhafte Speicherung, atomare Kapazitätsprüfung, Schutz vor Spam, HMAC-Prüfung und dauerhafte Deduplizierung anhand von `Idempotency-Key`. Nur nach gesicherter Annahme darf er mit folgendem JSON antworten:
+## Inhalte und Grenzen
 
-```json
-{"accepted":true,"reference":"FLUFFY-12345"}
-```
+- `src/catalog.js`: Sortiment und Cent-Preise.
+- `src/render-catalog.js`: gemeinsame HTML-Ausgabe für Build und Filter.
+- `index.html`, `src/style.css`: Texte, Gestaltung und responsive Typografie.
+- `src/legal.js`: rechtliche Inhalte; Vite erzeugt daraus die eigenständigen Seiten.
+- Die Matcha-Darstellung wurde am 13.10.2026 als passende Higgsfield-Produktaufnahme ergänzt. Die Café-Szene ist eine atmosphärische Visualisierung, kein bestätigtes Ladenfoto.
+- Die Preis- und Validierungsfunktionen für eine mögliche spätere Bestellfunktion bleiben als ungenutzte Module erhalten; im MVP sind sie nicht mit der Website verbunden.
 
-Signatur: hex-kodierter HMAC-SHA256 über `X-Fluffy-Timestamp + '.' + unveränderter JSON-Body`, mit `COMMERCE_WEBHOOK_SECRET`. Alte Zeitstempel ablehnen. Reservierungsanfragen und Bestellungen enthalten Namen, E-Mail und Slot; Bestellungen zusätzlich serverseitig berechnete Positionen und Gesamtpreis. Preise aus dem Browser werden ignoriert. Keine Kundendaten werden auf der Website in Logs geschrieben. Eine fehlende oder ungültige Bestätigung wird niemals als Erfolg angezeigt.
+## Prüfungen
 
-Das Annahmesystem ist eine noch einzurichtende externe Abhängigkeit. Es gibt keine versteckte lokale Schein-Datenbank und keine vorgetäuschte Buchung.
+`npm test`: zehn Tests für Preisvalidierung, Zeitfenster, deaktivierte Commerce-API, Zeitabbildung, Richtungswechsel und statischen Katalog. Zusätzlich: Build, mobile/desktop Browserprüfung, Film vorwärts/rückwärts, Pause, Filter, eigenständige Rechtshinweise und Überläufe.
 
-## Medien und Grenzen
-
-Die ursprüngliche Pancake-Aufnahme und das Logo stammen aus Higgsfield. Der vorhandene Film wurde mit Kling 3.0 Omni Edit bearbeitet. Verifizierte Ausgabe: **3848 × 2152 Pixel, 24 fps, 15,04 Sekunden**. „8K“ und „120 fps“ aus dem Kreativbrief wurden nicht erreicht. Der Film zeigt eine Makrofahrt mit Café-Abschluss; das gewünschte einzelne Aufsetzen der drei Pancakes wurde vom Modell nicht korrekt umgesetzt. Eine gezielte Korrektur wurde durch das Tageslimit abgewiesen und bleibt offen. Der Einstieg beginnt bei Bild 48, damit die zunächst schwebende Gesamtformation nicht gezeigt wird.
-
-Der Originalmaster bleibt lokal in `.local-assets/stacking-master.mp4`; optimierte Desktop- und Mobilbilder liegen im Repository. `node scripts/prepare-stacking.mjs` erzeugt 24 Bilder pro Sekunde in einem frischen Zielordner und prüft die Vollständigkeit. Der Desktop lädt höchstens drei Bilder gleichzeitig und hält etwa 90 MiB dekodierte Bilder im Cache. Originalmaster werden nicht für jeden Seitenbesuch heruntergeladen.
-
-Das zusätzliche Matcha-Foto wurde vom Higgsfield-Tageslimit abgewiesen. Die Matcha-Kreation nutzt deshalb eine eigens erstellte SVG-Illustration; alle Produktbilder sind als Serviervorschläge gekennzeichnet. Die nicht mehr gewünschte Trüffelaufnahme ist nicht Bestandteil der Website. Die Café-Aufnahme ist eine atmosphärische Visualisierung, kein Foto einer bestätigten Geschäftsadresse.
-
-Die bereitgestellte PDF enthält 18 Pancake-Varianten, individuelle Kombinationen, Desserts und Getränke, aber keine Preise und keine vollständige Allergenmatrix. Produkte ohne bestätigte Allergenangaben werden nicht als „ohne Gluten“ oder „ohne Milch“ ausgegeben.
-
-## Technische Referenzen
-
-- Lenis/GSAP-Anbindung: https://github.com/darkroomengineering/lenis
-- Vercel Functions: https://vercel.com/docs/functions
-- Anbieterangaben: https://www.gesetze-im-internet.de/ddg/__5.html
-- Bestellsituation: https://www.gesetze-im-internet.de/bgb/__312j.html
-
-Die Rechtstexte sind ohne die tatsächlichen Betriebsdaten nicht veröffentlichungsfertig.
+Technische Referenz für das Zusammenführen von Video-Seeks: https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/seeked_event

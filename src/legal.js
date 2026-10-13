@@ -1,15 +1,11 @@
 export const legal = {
   impressum: {
     title: "Impressum",
-    body: "<p>Fluffy — Japanische Soufflé-Pâtisserie</p><p>Diese Website befindet sich in der Vorbereitungsphase. Betreiber, Rechtsform, ladungsfähige Anschrift, Vertretungsberechtigte und Kontaktdaten wurden noch nicht bereitgestellt.</p><p>Die Angaben nach § 5 DDG werden vor der öffentlichen Geschäftsaufnahme ergänzt. Derzeit können über diese Vorschau keine verbindlichen Bestellungen oder Reservierungen abgeschlossen werden.</p>",
+    body: "<p>Fluffy — Japanische Soufflé-Pâtisserie</p><p>Diese Markenwebsite bietet keine Online-Bestellung oder Reservierung an. Betreiber, Rechtsform, ladungsfähige Anschrift, Vertretungsberechtigte und Kontaktdaten wurden noch nicht bereitgestellt.</p><p>Die Angaben nach § 5 DDG werden vor der öffentlichen Geschäftsaufnahme ergänzt. Über diese Website können keine Verträge oder Reservierungen abgeschlossen werden.</p>",
   },
   datenschutz: {
     title: "Datenschutz",
-    body: "<p>In dieser Vorschau werden keine Bestellungen oder Reservierungen an die Boutique übermittelt. Angaben in den Formularen bleiben während der Nutzung im Arbeitsspeicher Ihres Browsers.</p><p>Der Warenkorb wird ausschließlich in Ihrem Browser gespeichert. Er lässt sich über „Warenkorb leeren“ entfernen. Schriften und Bilder werden vom Website-Server geladen. Es sind keine Analyse- oder Werbedienste eingebunden. Die optionale Klangkulisse wird lokal im Browser erzeugt.</p><p>Beim späteren Hosting können technische Zugriffsdaten durch den Hostinganbieter verarbeitet werden. Vor Veröffentlichung werden Verantwortlicher, Kontakt, Empfänger, Rechtsgrundlagen, Speicherfristen und Ihre Datenschutzrechte passend zur tatsächlichen Verarbeitung ergänzt. Dieser Text ist noch keine vollständige Datenschutzerklärung für den Geschäftsbetrieb.</p>",
-  },
-  agb: {
-    title: "Allgemeine Geschäftsbedingungen",
-    body: "<p>Die Bestell- und Reservierungsfunktionen stehen derzeit als Vorschau zur Verfügung. Eine Vorschau begründet keinen Kaufvertrag und keine Tischreservierung.</p><p>Die angezeigten Preise der drei Boutique-Kreationen verstehen sich einschließlich Mehrwertsteuer. Für das weitere Sortiment sind noch keine Verkaufspreise freigegeben.</p><p>Verbindliche Bedingungen zu Vertragsschluss, Abholung, Zahlung, Ausfällen, Stornierung und Reservierung werden nach Abstimmung mit dem Betreiber vor Freischaltung ergänzt.</p>",
+    body: "<p>Diese Website stellt die Marke und Speisekarte von Fluffy vor. Es gibt keine Bestell-, Reservierungs- oder Kontaktformulare. Der Marken-MVP setzt keine Analyse- oder Werbedienste ein und speichert keinen Warenkorb.</p><p>Schriften, Bilder und Videos werden vom Website-Server geladen. Die freiwillig aktivierte Klangkulisse entsteht lokal in Ihrem Browser. Beim Aufruf verarbeitet der Hostinganbieter Vercel technisch erforderliche Verbindungs- und Zugriffsdaten.</p><p>Die Angaben zum datenschutzrechtlich Verantwortlichen und dessen Kontakt fehlen noch. Die vollständigen Angaben zu Hosting, Rechtsgrundlagen, Speicherfristen und Betroffenenrechten müssen vor dem regulären öffentlichen Betrieb ergänzt werden. Dieser Hinweis ist noch keine vollständige Datenschutzerklärung.</p>",
   },
   allergene: {
     title: "Allergenhinweise",

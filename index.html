@@ -13,7 +13,11 @@
       property="og:description"
       content="Japanische Soufflé-Pâtisserie. Wie eine Wolke. Handgefertigt in Perfektion."
     />
-    <meta property="og:image" content="/assets/poster.webp" />
+    <link rel="canonical" href="https://fluffy-chi.vercel.app/" />
+    <meta property="og:url" content="https://fluffy-chi.vercel.app/" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://fluffy-chi.vercel.app/assets/poster.webp" />
     <title>Fluffy — Japanische Soufflé-Pâtisserie</title>
     <link rel="icon" href="/assets/icon.svg" />
     <link rel="stylesheet" href="/src/style.css" />
@@ -29,12 +33,7 @@
         ><a href="#handwerk" data-cursor="Entdecken">Unser Handwerk</a
         ><a href="#boutique">Die Boutique</a>
       </nav>
-      <div class="header-actions">
-        <button class="reservation-link" data-reserve>Tisch reservieren</button
-        ><button class="bag-button" data-cart aria-label="Warenkorb öffnen">
-          Warenkorb <span id="cart-count">0</span>
-        </button>
-      </div>
+      <div class="header-actions"><a class="text-link" href="#speisekarte">Speisekarte ↗</a></div>
     </header>
     <main>
       <section
@@ -48,7 +47,7 @@
             src="/assets/stacking-poster.webp"
             alt="Goldene japanische Soufflé-Pancakes mit Butter und Ahornsirup"
             fetchpriority="high"
-          /><canvas id="story-canvas" aria-hidden="true"></canvas>
+          /><video id="story-video" muted playsinline preload="none" aria-hidden="true" disablepictureinpicture></video><span class="story-status" role="status" hidden>Film wird vorbereitet …</span>
           <div class="hero-wash"></div>
           <div class="hero-copy">
             <p class="eyebrow">JAPANISCHE SEELE. FEINE PÂTISSERIE.</p>
@@ -59,8 +58,8 @@
             <a
               class="dark-button magnetic"
               href="#kollektion"
-              data-cursor="Bestellen"
-              >Jetzt bestellen <span>↗</span></a
+              data-cursor="Entdecken"
+              >Kreationen entdecken <span>↗</span></a
             >
           </div>
           <span class="vertical-note" aria-hidden="true"
@@ -136,7 +135,7 @@
           Bitte sprechen Sie mit uns.
         </p>
         <div class="collection-foot">
-          <span>Bildwelten und Illustration als Serviervorschlag.</span
+          <span>Produktbilder als Serviervorschlag.</span
           ><button class="text-link" data-legal="allergene">
             Allergenhinweise <span>↗</span>
           </button>
@@ -145,7 +144,7 @@
       <section id="handwerk" class="craft">
         <div class="craft-image">
           <img
-            src="/assets/pancake-master.png"
+            src="/assets/pancake-texture.webp"
             alt="Der luftige, goldene Teig unserer japanischen Soufflé-Pancakes"
             loading="lazy"
             width="1344"
@@ -188,8 +187,7 @@
             <h2>Für jeden Moment<br /><em>eine kleine Entdeckung.</em></h2>
           </div>
           <p class="section-aside">
-            Unsere Speisekarte.<br />Das weitere Sortiment und seine Preise<br />werden
-            für die Vorbestellung ergänzt.
+            Von unseren Soufflé-Klassikern bis zur warmen Tasse Matcha. Entdecken Sie die ganze Vielfalt von Fluffy.
           </p>
         </div>
         <div id="menu-accordions"></div>
@@ -203,8 +201,7 @@
           <p id="composition-summary" aria-live="polite"></p>
           <p class="subtle">
             Besondere Extras: Dubai-Schokolade · Extra Pistazie · Frische Beeren
-            · Mochi · Extra Eis · Extra Sauce. Individuelle Kompositionen sind
-            noch nicht online bestellbar.
+            · Mochi · Extra Eis · Extra Sauce. Lassen Sie sich von Ihrer persönlichen Kombination inspirieren.
           </p>
         </details>
       </section>
@@ -223,9 +220,7 @@
             Eine warme Tasse. Ein leises Gespräch.<br />Und die Freiheit, den
             Moment zu genießen.
           </p>
-          <button class="dark-button magnetic" data-reserve>
-            Tisch reservieren <span>↗</span>
-          </button>
+          <a class="dark-button magnetic" href="#speisekarte">Speisekarte entdecken <span>↗</span></a>
           <p id="boutique-address" class="location-note">
             Unsere Boutique in Deutschland.<br />Adresse und Öffnungszeiten
             folgen.
@@ -239,8 +234,8 @@
         <a
           href="#kollektion"
           class="outline-button magnetic"
-          data-cursor="Bestellen"
-          >Jetzt bestellen <span>↗</span></a
+          data-cursor="Entdecken"
+          >Kreationen entdecken <span>↗</span></a
         >
       </section>
     </main>
@@ -254,15 +249,10 @@
           Sie.
         </p>
         <div>
-          <a href="#kollektion">Vorbestellung</a
-          ><button data-reserve>Tischreservierung</button
-          ><a href="#speisekarte">Speisekarte</a>
+          <a href="#kollektion">Unsere Kreationen</a><a href="#handwerk">Unser Handwerk</a><a href="#speisekarte">Speisekarte</a>
         </div>
         <div>
-          <button data-legal="impressum">Impressum</button
-          ><button data-legal="datenschutz">Datenschutz</button
-          ><button data-legal="agb">AGB</button
-          ><button data-legal="allergene">Allergenhinweise</button>
+          <a href="/impressum.html" data-legal="impressum">Impressum</a><a href="/datenschutz.html" data-legal="datenschutz">Datenschutz</a><a href="/allergenhinweise.html" data-legal="allergene">Allergenhinweise</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -273,141 +263,6 @@
         </button>
       </div>
     </footer>
-    <dialog id="cart-dialog" class="drawer" aria-labelledby="cart-title">
-      <div class="dialog-head">
-        <div>
-          <p class="eyebrow">FÜR IHREN GENUSSMOMENT</p>
-          <h2 id="cart-title">Ihre <em>Auswahl.</em></h2>
-        </div>
-        <button class="close-dialog" aria-label="Warenkorb schließen">×</button>
-      </div>
-      <div class="drawer-body" data-lenis-prevent>
-        <div id="cart-items"></div>
-        <div id="cart-summary"></div>
-        <p id="cart-receipt" class="form-status" role="status"></p>
-        <div id="checkout-area" hidden>
-          <p class="eyebrow">01 / ABHOLUNG</p>
-          <label
-            >Abholzeitfenster auswählen<select
-              id="pickup-slot"
-              required
-            ></select
-          ></label>
-          <p class="slot-note">
-            Beispielzeiten in der Vorschau. Verfügbarkeit noch nicht bestätigt.
-          </p>
-          <form id="checkout-form">
-            <p class="eyebrow">02 / IHRE ANGABEN</p>
-            <label
-              >Vor- und Nachname<input
-                name="name"
-                autocomplete="name"
-                required
-                minlength="2"
-                maxlength="100" /></label
-            ><label
-              >E-Mail-Adresse<input
-                name="email"
-                type="email"
-                autocomplete="email"
-                required
-                maxlength="254"
-            /></label>
-            <p class="payment-note">
-              Vorgesehene Zahlart: Zahlung bei Abholung.
-            </p>
-            <label class="consent"
-              ><input type="checkbox" name="consent" required /><span
-                >Ich habe den
-                <button type="button" data-legal="datenschutz">
-                  Datenschutzhinweis
-                </button>
-                gelesen.</span
-              ></label
-            >
-            <div class="preview-notice">
-              Vorschau: Es wird keine Bestellung aufgegeben und nichts
-              berechnet.
-            </div>
-            <button type="submit" class="dark-button checkout-submit">
-              Bestellübersicht prüfen <span>↗</span>
-            </button>
-            <p id="order-status" class="form-status" role="status"></p>
-          </form>
-        </div>
-        <button id="clear-cart" class="small-link">Warenkorb leeren</button>
-      </div>
-    </dialog>
-    <dialog
-      id="reservation-dialog"
-      class="reservation-dialog"
-      aria-labelledby="reservation-title"
-    >
-      <div class="dialog-head">
-        <div>
-          <p class="eyebrow">ZEIT FÜR EINEN WOLKENMOMENT</p>
-          <h2 id="reservation-title">Ein Tisch<br /><em>für Sie.</em></h2>
-        </div>
-        <button class="close-dialog" aria-label="Reservierung schließen">
-          ×
-        </button>
-      </div>
-      <form id="reservation-form" data-lenis-prevent>
-        <div class="form-row">
-          <label
-            >Personen<select name="guests">
-              <option value="1">1 Person</option>
-              <option value="2" selected>2 Personen</option>
-              <option value="3">3 Personen</option>
-              <option value="4">4 Personen</option>
-              <option value="5">5 Personen</option>
-              <option value="6">6 Personen</option>
-              <option value="7">7 Personen</option>
-              <option value="8">8 Personen</option>
-            </select></label
-          ><label
-            >Zeitfenster<select
-              id="reservation-slot"
-              name="slot"
-              required
-            ></select
-          ></label>
-        </div>
-        <p class="slot-note">
-          Beispielzeiten in der Vorschau. Verfügbarkeit noch nicht bestätigt.
-        </p>
-        <label
-          >Vor- und Nachname<input
-            name="name"
-            autocomplete="name"
-            required
-            minlength="2"
-            maxlength="100" /></label
-        ><label
-          >E-Mail-Adresse<input
-            name="email"
-            type="email"
-            autocomplete="email"
-            required
-            maxlength="254" /></label
-        ><label class="consent"
-          ><input type="checkbox" name="consent" required /><span
-            >Ich habe den
-            <button type="button" data-legal="datenschutz">
-              Datenschutzhinweis
-            </button>
-            gelesen.</span
-          ></label
-        >
-        <div class="preview-notice">
-          Vorschau: Es wird kein Tisch reserviert und keine Anfrage übermittelt.
-        </div>
-        <button type="submit" class="dark-button">
-          Reservierung prüfen <span>↗</span>
-        </button>
-        <p id="reservation-status" class="form-status" role="status"></p>
-      </form>
-    </dialog>
     <dialog
       id="legal-dialog"
       class="legal-dialog"
@@ -421,20 +276,7 @@
     </dialog>
     <div id="toast" class="toast" role="status"></div>
     <div id="cursor" aria-hidden="true"><span></span></div>
-    <noscript
-      ><style>
-        .story {
-          height: 100svh;
-        }
-        .product-grid:empty::after {
-          content: "Bitte aktivieren Sie JavaScript für Produktauswahl und Warenkorb.";
-        }
-      </style>
-      <p>
-        Die Online-Auswahl benötigt JavaScript. Die Boutique ist derzeit in
-        Vorbereitung.
-      </p></noscript
-    >
+    <noscript><style>.story{height:100svh}.hero-caption,.story-controls,#cursor,.category-filters,.allergen-select,.compose-menu{display:none!important}</style></noscript>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

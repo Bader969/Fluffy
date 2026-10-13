@@ -19,8 +19,8 @@ export const products = [
     description:
       "Zeremonieller Bio-Matcha trifft auf eine zarte Creme aus weißer Schokolade.",
     price: 1600,
-    image: "/assets/matcha.svg",
-    alt: "Illustration einer Soufflé-Kreation mit Matcha",
+    image: "/assets/matcha-photo.webp",
+    alt: "Soufflé-Pancakes mit Uji-Matcha und weißer Schokoladencreme",
     category: "matcha",
     ingredients: ["Weizen", "Ei", "Milch"],
     allergensVerified: false,
