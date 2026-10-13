@@ -1051,6 +1051,7 @@ select {
 }
 .reduced .story {
   height: 100svh;
+  min-height: 650px;
 }
 .reduced #story-video {
   display: none;
@@ -1369,7 +1370,7 @@ select {
     padding: 80px 6%;
   }
   .closing h2 {
-    font-size: 65px;
+    font-size: clamp(44px, 15vw, 65px);
   }
   .closing .eyebrow {
     font-size: 14px;
@@ -1476,6 +1477,7 @@ select { min-height: 48px; }
 .drawer-body { height: auto; flex: 1; min-height: 0; }
 @media(max-width:1100px) { .site-header nav { display:none; } .story-step { display:none; } }
 @media(max-width:700px) {
+  .reduced .story { min-height: 680px; }
   .site-header { height: 94px; }
   .wordmark > span { display:none; }
   .header-actions { font-size:16px; }
